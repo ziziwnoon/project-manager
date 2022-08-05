@@ -1,0 +1,11 @@
+###register
+POST "http://localhost:4000/auth/register"
+content-type: application/json
+
+{
+    "username" : "zeinab",
+    "email" : "zeinab@yahoo.com",
+    "mobile" : "09035369282",
+    "password" : "13801380",
+    "password" : "13801380",
+}
