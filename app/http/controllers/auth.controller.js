@@ -24,12 +24,15 @@ class AuthController{
             if(!user) throw{status : 401 , message : "نام کاربری یا رمز عبور صحیح نیست"};
             const compareResult = compareStringWithHash(password , user.password);
             if(!compareResult) throw{status : 401 , message : "نام کاربری یا رمز عبور صحیح نیست"};
+            const token = tokenGenerator({username});
+            user.token = token;
+            user.save();
 
             return res.status(200).json({
                 status : 200 ,
                 success : true ,
                 message : "با موفقیت وارد شدید" ,
-                tokrn: tokenGenerator({username})
+                token
             })
         } catch (error) {
             next(error)

@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 
 function expressValidatorMapper(req,res,next){
-        let messages = {};
+    let messages = {};
     const result = validationResult(req);
     if(result?.errors?.length>0){
         result?.errors.forEach(err => {

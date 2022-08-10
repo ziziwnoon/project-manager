@@ -1,0 +1,15 @@
+###get profile
+http://localhost:4000/user/profile
+content-type: application/json
+Authorization: Bearer {{$dotenv token}}
+
+###get profile
+POST http://localhost:4000/user/profile
+content-type: application/json
+Authorization: Bearer {{$dotenv token}}
+
+{
+    "first_name" : "kian",
+    "last_name" : "",
+    "skills" : ["drawing"]
+}
