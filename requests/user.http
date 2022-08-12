@@ -3,7 +3,7 @@ http://localhost:4000/user/profile
 content-type: application/json
 Authorization: Bearer {{$dotenv token}}
 
-###get profile
+###edit profile
 POST http://localhost:4000/user/profile
 content-type: application/json
 Authorization: Bearer {{$dotenv token}}

@@ -10,7 +10,8 @@ const userSchema = new Schema({
     role : {type : [String] , default: ["USER"]},
     skills : {type : [String] , default:[]},
     team : {type : [Types.ObjectId], default:[]},
-    token : {type:String , default:""}
+    token : {type:String , default:""},
+    profile_image : {type:String , default:""}
 },{
     timestamps:true
 })
