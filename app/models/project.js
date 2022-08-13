@@ -7,6 +7,7 @@ const projectSchema = new Schema({
     owner : {type : Types.ObjectId},
     team : {type : Types.ObjectId},
     private : {type : Boolean , default:true},
+    tags : {type : [String] , default:[]}
 })
 
 const ProjectModel = model("project" , projectSchema);
