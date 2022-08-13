@@ -1,0 +1,9 @@
+###create project
+POST http://localhost:4000/project/create
+content-type: application/json
+Authorization: Bearer {{$dotenv token}}
+
+{
+    "title" : "project1",
+    "text" : "this is description for project1 of project manager"
+}
